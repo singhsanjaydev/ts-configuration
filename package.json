@@ -1,0 +1,14 @@
+{
+  "name": "ts-configuration",
+  "version": "0.1.0",
+  "description": "minimal typescript project exploring tsconfig.json with strict configuration",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhsanjaydev/ts-configuration.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/singhsanjaydev/ts-configuration/issues"
+  },
+  "homepage": "https://github.com/singhsanjaydev/ts-configuration#readme"
+}

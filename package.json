@@ -10,5 +10,12 @@
   "bugs": {
     "url": "https://github.com/singhsanjaydev/ts-configuration/issues"
   },
-  "homepage": "https://github.com/singhsanjaydev/ts-configuration#readme"
+  "homepage": "https://github.com/singhsanjaydev/ts-configuration#readme",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
 }

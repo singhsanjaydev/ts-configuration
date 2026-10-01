@@ -1,3 +1,13 @@
+// ==========================================================================
+// TSCONFIG.JSON EDUCATIONAL MASTER TEMPLATE
+// ==========================================================================
+// This file contains a comprehensive overview of TypeScript configuration options.
+// Format per option:
+// - Brief: Core function in 1 sentence.
+// - Detail: Extended explanation of behavioral mechanics and impact.
+// - Usage: When, why, and in what project architecture to use or avoid it.
+// - Example: Sample syntax or contextual configurations.
+
 {
   "compilerOptions": {}
 }

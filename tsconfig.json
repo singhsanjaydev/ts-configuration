@@ -1,40 +1,212 @@
-// ==========================================================================
-// TSCONFIG.JSON EDUCATIONAL MASTER TEMPLATE
-// ==========================================================================
-// This file contains a comprehensive overview of TypeScript configuration options.
-// Format per option:
-// - @brief: Core function in 1 sentence.
-// - @detail: Extended explanation of behavioral mechanics and impact.
-// - @usage: When, why, and in what project architecture to use or avoid it.
-// - @example: Sample syntax or contextual configurations.
-
+/** ##### TSCONFIG.JSON TEMPLATE */
 {
-  /* --------------------------------------------------
-     Core Inclusion & Exclusion Rules
-     -------------------------------------------------- */
-
-  // @brief: Specify an explicit array of exact file paths to compile.
-  // @detail: Instructs the compiler to load only the exact files listed. Unlike 'include', it does not support glob patterns or wildcards; every file must be mapped out individually.
-  // @usage: Ideal for small projects with few files, or when you need to pin down exact entry points (like a single 'index.ts') and let TypeScript resolve imports automatically.
-  // @example: "files": ["src/index.ts", "src/types.d.ts"]
-  // "files": [],
-
-  // @brief: Specify an array of file paths or glob patterns to compile.
-  // @detail: Dictates exactly what folders or file patterns the compiler will index and build. Supports standard wildcards (e.g., '**/*' for recursive directories).
-  // @usage: Standard way to encapsulate the entire source tree of your application and separate it from configurations.
-  // @example: "include": ["src/**/*"]
-  // "include": [],
-
-  // @brief: Specify an array of file paths or glob patterns to skip during compilation.
-  // @detail: Excludes matched directories from being compiled. Note that if an included file explicitly imports an excluded file, it will still be evaluated.
-  // @usage: Crucial to isolate build directories, dependency files, and testing outputs from the main build cycle.
-  // @example: "exclude": ["node_modules", "dist", "**/*.spec.ts"]
-  // "exclude": [],
-
-  /* --------------------------------------------------
-     External Sources & Modular Inheritance
-     -------------------------------------------------- */
-  // extends and references
-
-  "compilerOptions": {}
+  /** ===== Top Level */
+  "files": [],
+  "include": [],
+  "exclude": [],
+  "extends": [],
+  "references": [],
+  /** ===== "compilerOptions" */
+  "compilerOptions": {
+    /** --------------------
+    Type Checking
+    -------------------- */
+    /*---- Strict Mode ----*/
+    "strict": null,
+    "alwaysStrict": null,
+    "noImplicitAny": null,
+    "noImplicitThis": null,
+    "strictBindCallApply": null,
+    "strictBuiltinIteratorReturn": null,
+    "strictFunctionTypes": null,
+    "strictNullChecks": null,
+    "strictPropertyInitialization": null,
+    "useUnknownInCatchVariables": null,
+    /*---- Code-Quality & Linter Rules /*----*/
+    // Dead Code & Variable Checking
+    "allowUnreachableCode": null,
+    "allowUnusedLabels": null,
+    "noUnusedLocals": null,
+    "noUnusedParameters": null,
+    // Enhanced Object & Property Checks
+    "exactOptionalPropertyTypes": null,
+    "noPropertyAccessFromIndexSignature": null,
+    "noUncheckedIndexedAccess": null,
+    // Control Flow & Class Checks
+    "noFallthroughCasesInSwitch": null,
+    "noImplicitOverride": null,
+    "noImplicitReturns": null,
+    /** --------------------
+    Modules
+    -------------------- */
+    /*---- Paths & Root Configurations ----*/
+    "baseUrl": null,
+    "paths": null,
+    "rootDir": null,
+    "rootDirs": null,
+    /*---- Core Resolution Algorithms ----*/
+    "module": null,
+    "moduleResolution": null,
+    "customConditions": null,
+    "moduleSuffixes": null,
+    "noResolve": null,
+    /*---- Extensions & Interoperability ----*/
+    "allowArbitraryExtensions": null,
+    "allowImportingTsExtensions": null,
+    "rewriteRelativeImportExtensions": null,
+    "resolveJsonModule": null,
+    "noUncheckedSideEffectImports": null,
+    /*---- Global Packages, Exports, & Defs ----*/
+    "resolvePackageJsonExports": null,
+    "resolvePackageJsonImports": null,
+    "allowUmdGlobalAccess": null,
+    "typeRoots": null,
+    "types": [],
+    /** --------------------
+    Emit
+    -------------------- */
+    /*---- Output Directories & Bundling ----*/
+    "outDir": null,
+    "outFile": null,
+    "declarationDir": null,
+    /*---- Code Generation & Optimization ----*/
+    "downlevelIteration": null,
+    "emitBOM": false,
+    "importHelpers": false,
+    "newLine": "lf",
+    "noEmitHelpers": false,
+    "preserveConstEnums": false,
+    "removeComments": false,
+    /*---- Source Map Management ----*/
+    "sourceMap": false,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "mapRoot": null,
+    "sourceRoot": null,
+    /*---- Emission Controls & Declarations ----*/
+    "noEmit": false,
+    "noEmitOnError": false,
+    "declaration": null,
+    "emitDeclarationOnly": false,
+    "declarationMap": false,
+    "stripInternal": null,
+    /** --------------------
+    JavaScript Support
+    -------------------- */
+    "allowJs": false,
+    "checkJs": false,
+    "maxNodeModuleJsDepth": 0,
+    /** --------------------
+    Editor Support
+    -------------------- */
+    "disableSizeLimit": false,
+    "plugins": null,
+    /** --------------------
+    Interop Constraints
+    -------------------- */
+    /*---- ES Modules & CommonJS Interoperability ----*/
+    "allowSyntheticDefaultImports": null,
+    "esModuleInterop": null,
+    "verbatimModuleSyntax": null,
+    /*---- Single-File Transpilation & Modern Runtimes ----*/
+    "isolatedModules": false,
+    "isolatedDeclarations": false,
+    "erasableSyntaxOnly": false,
+    /*---- Operating System & File System Constraints ----*/
+    "forceConsistentCasingInFileNames": true,
+    "preserveSymlinks": false,
+    /** --------------------
+    Backwards Compatibility
+    -------------------- */
+    /*---- Deprecated Module & Import Handling ----*/
+    "importsNotUsedAsValues": "remove",
+    "preserveValueImports": false,
+    /*---- Legacy Output & File Handling ----*/
+    "out": null,
+    "charset": null,
+    "noImplicitUseStrict": false,
+    /*---- Type Checking Suppressions ----*/
+    "suppressExcessPropertyErrors": false,
+    "suppressImplicitAnyIndexErrors": false,
+    /*---- Legacy Internal Compiler Settings ----*/
+    "keyofStringsOnly": false,
+    "noStrictGenericChecks": false,
+    /** --------------------
+    Language and Environment
+    -------------------- */
+    /*---- JavaScript Target & Global Environments ----*/
+    "target": "es2025",
+    "lib": null,
+    "noLib": false,
+    "libReplacement": false,
+    "moduleDetection": "auto",
+    /*---- JSX Support & Configuration ----*/
+    "jsx": "react",
+    "jsxImportSource": "react",
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment",
+    "reactNamespace": "React",
+    /*---- Class Fields & Experimental Features ----*/
+    "useDefineForClassFields": false,
+    "experimentalDecorators": null,
+    "emitDecoratorMetadata": null,
+    /** --------------------
+    Compiler Diagnostics
+    -------------------- */
+    /*---- Performance Profiling & Metrics ----*/
+    "diagnostics": null,
+    "extendedDiagnostics": false,
+    "generateCpuProfile": "profile.cpuprofile",
+    "generateTrace": null,
+    /*---- File Graph & Input/Output Auditing ----*/
+    "listFiles": false,
+    "explainFiles": true,
+    "listEmittedFiles": false,
+    /*---- Resolution Tracing & Safety Toggles ----*/
+    "traceResolution": false,
+    "noCheck": false,
+    /** --------------------
+    Projects
+    -------------------- */
+    /*---- Project Reference & Build Activation ----*/
+    "composite": true,
+    "incremental": null,
+    /*---- Build Cache & Artifact Tracking ----*/
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "disableSourceOfProjectReferenceRedirect": null,
+    /*---- Performance & Editor Optimization ----*/
+    "disableReferencedProjectLoad": null,
+    "disableSolutionSearching": null,
+    /** --------------------
+    Output Formatting
+    -------------------- */
+    "noErrorTruncation": false,
+    "preserveWatchOutput": null,
+    "pretty": true,
+    /** --------------------
+    Completeness & Type-Check Optimization
+    -------------------- */
+    "skipDefaultLibCheck": false,
+    "skipLibCheck": false,
+    /** --------------------
+    Watch Options
+    -------------------- */
+    "assumeChangesOnlyAffectDirectDependencies": null,
+  },
+  /** ===== "watchOptions" */
+  "watchOptions": {
+    "watchFile": null,
+    "watchDirectory": null,
+    "fallbackPolling": null,
+    "synchronousWatchDirectory": null,
+    "excludeDirectories": null,
+    "excludeFiles": null
+  },
+  /** ===== "typeAcquisition" */
+  "typeAcquisition": {
+    "enable": false,
+    "include": null,
+    "exclude": null,
+    "disableFilenameBasedTypeAcquisition": null
+  }
 }

@@ -10,8 +10,14 @@
 
 {
   /* --------------------------------------------------
-     FILE SELECTION & INCLUSION CONTROL
+     Core Inclusion & Exclusion Rules
      -------------------------------------------------- */
+
+  // @brief: Specify an explicit array of exact file paths to compile.
+  // @detail: Instructs the compiler to load only the exact files listed. Unlike 'include', it does not support glob patterns or wildcards; every file must be mapped out individually.
+  // @usage: Ideal for small projects with few files, or when you need to pin down exact entry points (like a single 'index.ts') and let TypeScript resolve imports automatically.
+  // @example: "files": ["src/index.ts", "src/types.d.ts"]
+  // "files": [],
 
   // @brief: Specify an array of file paths or glob patterns to compile.
   // @detail: Dictates exactly what folders or file patterns the compiler will index and build. Supports standard wildcards (e.g., '**/*' for recursive directories).
@@ -19,12 +25,16 @@
   // @example: "include": ["src/**/*"]
   // "include": [],
 
-  // Brief: Specify an array of file paths or glob patterns to skip during compilation.
-  // Detail: Excludes matched directories from being compiled. Note that if an included file explicitly imports an excluded file, it will still be evaluated.
-  // Usage: Crucial to isolate build directories, dependency files, and testing outputs from the main build cycle.
-  // Example: "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+  // @brief: Specify an array of file paths or glob patterns to skip during compilation.
+  // @detail: Excludes matched directories from being compiled. Note that if an included file explicitly imports an excluded file, it will still be evaluated.
+  // @usage: Crucial to isolate build directories, dependency files, and testing outputs from the main build cycle.
+  // @example: "exclude": ["node_modules", "dist", "**/*.spec.ts"]
   // "exclude": [],
 
+  /* --------------------------------------------------
+     External Sources & Modular Inheritance
+     -------------------------------------------------- */
+  // extends and references
 
   "compilerOptions": {}
 }

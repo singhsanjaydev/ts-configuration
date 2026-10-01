@@ -3,11 +3,28 @@
 // ==========================================================================
 // This file contains a comprehensive overview of TypeScript configuration options.
 // Format per option:
-// - Brief: Core function in 1 sentence.
-// - Detail: Extended explanation of behavioral mechanics and impact.
-// - Usage: When, why, and in what project architecture to use or avoid it.
-// - Example: Sample syntax or contextual configurations.
+// - @brief: Core function in 1 sentence.
+// - @detail: Extended explanation of behavioral mechanics and impact.
+// - @usage: When, why, and in what project architecture to use or avoid it.
+// - @example: Sample syntax or contextual configurations.
 
 {
+  /* --------------------------------------------------
+     FILE SELECTION & INCLUSION CONTROL
+     -------------------------------------------------- */
+
+  // @brief: Specify an array of file paths or glob patterns to compile.
+  // @detail: Dictates exactly what folders or file patterns the compiler will index and build. Supports standard wildcards (e.g., '**/*' for recursive directories).
+  // @usage: Standard way to encapsulate the entire source tree of your application and separate it from configurations.
+  // @example: "include": ["src/**/*"]
+  // "include": [],
+
+  // Brief: Specify an array of file paths or glob patterns to skip during compilation.
+  // Detail: Excludes matched directories from being compiled. Note that if an included file explicitly imports an excluded file, it will still be evaluated.
+  // Usage: Crucial to isolate build directories, dependency files, and testing outputs from the main build cycle.
+  // Example: "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+  // "exclude": [],
+
+
   "compilerOptions": {}
 }
